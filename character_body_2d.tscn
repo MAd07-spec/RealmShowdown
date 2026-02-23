@@ -8,12 +8,12 @@ radius = 128.0
 height = 514.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dd465"]
-size = Vector2(1509.5, 571.75)
+size = Vector2(2315, 571.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lhvu3"]
-size = Vector2(1274, 354)
+size = Vector2(2313, 354)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1410422238]
+[node name="Player" type="CharacterBody2D" unique_id=1410422238]
 position = Vector2(-50, 131)
 script = ExtResource("1_ij6vw")
 
@@ -28,17 +28,18 @@ shape = SubResource("CapsuleShape2D_44cfe")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1302843878]
 position = Vector2(81, -249)
+zoom = Vector2(0.5, 0.5)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1102958703]
 position = Vector2(-430, -331)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=939532332]
-position = Vector2(636, 688)
+position = Vector2(512.5, 688)
 shape = SubResource("RectangleShape2D_dd465")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1340024762]
 position = Vector2(146, -592)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1055042976]
-position = Vector2(7, 482)
+position = Vector2(-64.5, 485)
 shape = SubResource("RectangleShape2D_lhvu3")
