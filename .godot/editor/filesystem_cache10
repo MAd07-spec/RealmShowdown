@@ -1,7 +1,7 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1771838144
-character_body_2d.gd::GDScript::9137322332204583237::1771590100::0::1::::<>CharacterBody2D<><>0<>0<><>::
-character_body_2d.tscn::PackedScene::7149952654060376547::1771590890::0::1::::<><><>0<>0<><>::uid://d3ggmmubxco8l::::res://character_body_2d.gd<>uid://trj0m4fjj27i::::res://goldy.png
+::res://::1771974126
+character_body_2d.gd::GDScript::9137322332204583237::1771839667::0::1::::<>CharacterBody2D<><>0<>0<><>::
+character_body_2d.tscn::PackedScene::7149952654060376547::1771839870::0::1::::<><><>0<>0<><>::uid://d3ggmmubxco8l::::res://character_body_2d.gd<>uid://trj0m4fjj27i::::res://goldy.png
 goldy.png::CompressedTexture2D::1369274224043272044::1771590100::1771590100::1::::<><><>0<>0<>9da1a02034f2f255efe0a7611e2beae5<>res://.godot/imported/goldy.png-088043468692aade24813e130ac5d4e3.ctex::
 icon.svg::CompressedTexture2D::8179520928514345702::1771590100::1771590100::1::::<><><>0<>0<>c33b0546571147d1041bd153a38b8744<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 PixelArtTutorial.png::CompressedTexture2D::5877227139745833612::1771837787::1771837787::1::::<><><>0<>0<>d1aeb530899c537fc8b31838097da242<>res://.godot/imported/PixelArtTutorial.png-353a897801bb45b0d5f0f5f2f4ae6cb5.ctex::
