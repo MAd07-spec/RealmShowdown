@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dgbl47v6wq6vw"]
+
+[ext_resource type="Script" uid="uid://1dcwq3xettu2" path="res://worldScript.gd" id="1_2dftf"]
+[ext_resource type="PackedScene" uid="uid://bd1dt8r4ihexp" path="res://Player.tscn" id="2_bcbcq"]
+
+[node name="World" type="Node2D" unique_id=846622534]
+script = ExtResource("1_2dftf")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=385666253]
+offset_right = 1067.0
+offset_bottom = 217.0
+
+[node name="CharacterBody2D" parent="." unique_id=992779417 instance=ExtResource("2_bcbcq")]

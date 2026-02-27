@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpy8cpunegwmm"
-path="res://.godot/imported/PixelArtTutorial.png-353a897801bb45b0d5f0f5f2f4ae6cb5.ctex"
+uid="uid://cldicn2iierse"
+path="res://.godot/imported/ATTACK 1.png-a62497a43d84fb8de9fe1fb615c209a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PixelArtTutorial.png"
-dest_files=["res://.godot/imported/PixelArtTutorial.png-353a897801bb45b0d5f0f5f2f4ae6cb5.ctex"]
+source_file="res://ATTACK 1.png"
+dest_files=["res://.godot/imported/ATTACK 1.png-a62497a43d84fb8de9fe1fb615c209a3.ctex"]
 
 [params]
 
