@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dgbl47v6wq6vw"]
 
-[ext_resource type="PackedScene" uid="uid://bd1dt8r4ihexp" path="res://Player.tscn" id="2_bcbcq"]
+[ext_resource type="PackedScene" uid="uid://7cwqo6wwlxr6" path="res://Player.tscn" id="2_bcbcq"]
 [ext_resource type="Texture2D" uid="uid://b4l45ay6n8453" path="res://Japan map.png" id="2_js7pq"]
 
 [node name="World" type="Node2D" unique_id=846622534]
@@ -11,5 +11,4 @@ scale = Vector2(2.2432, 2.0444446)
 texture = ExtResource("2_js7pq")
 
 [node name="Player" parent="." unique_id=992779417 instance=ExtResource("2_bcbcq")]
-visible = false
-position = Vector2(-273, 35)
+position = Vector2(-139, 9)
