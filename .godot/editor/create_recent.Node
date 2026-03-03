@@ -1,3 +1,15 @@
+<<<<<<< Updated upstream
+=======
+CanvasLayer
+TextureProgressBar
+Sprite2D
+ColorRect
+TextureRect
+Node2D
+Timer
+ParallaxBackground
+Camera2D
+>>>>>>> Stashed changes
 CollisionShape2D
 StaticBody2D
 Camera2D
