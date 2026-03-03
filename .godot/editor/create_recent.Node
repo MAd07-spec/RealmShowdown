@@ -1,4 +1,9 @@
+Sprite2D
 ColorRect
+TextureRect
+Node2D
+Timer
+ParallaxBackground
 Camera2D
 CollisionShape2D
 AnimatedSprite2D
