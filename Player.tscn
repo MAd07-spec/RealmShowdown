@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://7cwqo6wwlxr6"]
 
-[ext_resource type="Script" path="res://characterBody2d.gd" id="1_kne1u"]
+[ext_resource type="Script" uid="uid://sfcbgiju6vwn" path="res://characterBody2d.gd" id="1_kne1u"]
 [ext_resource type="Texture2D" uid="uid://dce5x1e8k0v0r" path="res://IDLE.png" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://cldicn2iierse" path="res://ATTACK 1.png" id="2_e80uo"]
 [ext_resource type="Texture2D" uid="uid://7cbnlgaqlcr8" path="res://RUN.png" id="2_kne1u"]
@@ -257,7 +257,7 @@ shape = SubResource("RectangleShape2D_e80uo")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=576114257]
 position = Vector2(-96, 0)
-limit_left = -961
-limit_top = -344
+limit_left = -937
+limit_top = -343
 limit_right = 343
-limit_bottom = 386
+limit_bottom = 377
