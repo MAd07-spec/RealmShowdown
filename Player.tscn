@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://7cwqo6wwlxr6"]
 
-[ext_resource type="Script" path="res://characterBody2d.gd" id="1_kne1u"]
+[ext_resource type="Script" uid="uid://sfcbgiju6vwn" path="res://characterBody2d.gd" id="1_kne1u"]
 [ext_resource type="Texture2D" uid="uid://dce5x1e8k0v0r" path="res://IDLE.png" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://cldicn2iierse" path="res://ATTACK 1.png" id="2_e80uo"]
 [ext_resource type="Texture2D" uid="uid://7cbnlgaqlcr8" path="res://RUN.png" id="2_kne1u"]
@@ -241,6 +241,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e80uo"]
+size = Vector2(92.5, 181.5)
 
 [node name="Player" type="CharacterBody2D" unique_id=992779417]
 scale = Vector2(2, 2)
@@ -250,14 +251,15 @@ script = ExtResource("1_kne1u")
 position = Vector2(-170.50002, 16.5)
 scale = Vector2(5.343099, 5.182617)
 sprite_frames = SubResource("SpriteFrames_e80uo")
-animation = &"attack"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=170499343]
+position = Vector2(-172.25, 99.25)
 shape = SubResource("RectangleShape2D_e80uo")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=576114257]
-position = Vector2(-96, 0)
-limit_left = -961
-limit_top = -344
-limit_right = 343
-limit_bottom = 386
+position = Vector2(1, 1)
+limit_left = -904
+limit_top = -350
+limit_right = 376
+limit_bottom = 370

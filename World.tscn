@@ -6,9 +6,9 @@
 [node name="World" type="Node2D" unique_id=846622534]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1447634756]
-position = Vector2(-324, 15.999998)
-scale = Vector2(2.2432, 2.0444446)
+position = Vector2(-263.00003, 10.999996)
+scale = Vector2(2.048, 2)
 texture = ExtResource("2_js7pq")
 
 [node name="Player" parent="." unique_id=992779417 instance=ExtResource("2_bcbcq")]
-position = Vector2(-139, 9)
+position = Vector2(-342, -25)
