@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< Updated upstream:PixelArtTutorial.png.import
-uid="uid://cpy8cpunegwmm"
-path="res://.godot/imported/PixelArtTutorial.png-353a897801bb45b0d5f0f5f2f4ae6cb5.ctex"
-========
-uid="uid://d0h3r6uwwtt4r"
-path="res://.godot/imported/water_bg.png-6ca1f1beeda380a0630cdcedbbac332c.ctex"
->>>>>>>> Stashed changes:water_bg.png.import
+uid="uid://c518nc30v4hyw"
+path="res://.godot/imported/goldy_run2.png-da9ab091c8aa226e6bf7257508b01e77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< Updated upstream:PixelArtTutorial.png.import
-source_file="res://PixelArtTutorial.png"
-dest_files=["res://.godot/imported/PixelArtTutorial.png-353a897801bb45b0d5f0f5f2f4ae6cb5.ctex"]
-========
-source_file="res://water_bg.png"
-dest_files=["res://.godot/imported/water_bg.png-6ca1f1beeda380a0630cdcedbbac332c.ctex"]
->>>>>>>> Stashed changes:water_bg.png.import
+source_file="res://goldy_run2.png"
+dest_files=["res://.godot/imported/goldy_run2.png-da9ab091c8aa226e6bf7257508b01e77.ctex"]
 
 [params]
 

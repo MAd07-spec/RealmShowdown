@@ -1,14 +1,20 @@
 [gd_scene format=3 uid="uid://dgbl47v6wq6vw"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://cpt8sn3v212ip" path="res://characterBody2d.gd" id="1_js7pq"]
 [ext_resource type="Texture2D" path="res://ATTACK 1.png" id="2_eu7l1"]
 [ext_resource type="Texture2D" path="res://IDLE.png" id="3_p1v5b"]
 [ext_resource type="Texture2D" path="res://RUN.png" id="4_wygdx"]
+=======
+[ext_resource type="Texture2D" uid="uid://d0h3r6uwwtt4r" path="res://water_bg.png" id="1_2dftf"]
+[ext_resource type="PackedScene" uid="uid://bd1dt8r4ihexp" path="res://Player.tscn" id="2_bcbcq"]
+>>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7wy67"]
 atlas = ExtResource("2_eu7l1")
 region = Rect2(192, 0, 96, 96)
 
+<<<<<<< Updated upstream
 [sub_resource type="AtlasTexture" id="AtlasTexture_q26ax"]
 atlas = ExtResource("2_eu7l1")
 region = Rect2(288, 0, 96, 96)
@@ -261,3 +267,21 @@ limit_left = -961
 limit_top = -344
 limit_right = 343
 limit_bottom = 386
+=======
+[node name="Background" type="Sprite2D" parent="." unique_id=1447634756]
+position = Vector2(-331.00003, 20)
+scale = Vector2(0.61301756, 0.6502845)
+texture = ExtResource("1_2dftf")
+
+[node name="Player" parent="." unique_id=992779417 instance=ExtResource("2_bcbcq")]
+position = Vector2(-321, 57)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=26046340]
+
+[node name="P1_HealthBar" type="TextureProgressBar" parent="UI" unique_id=1616720850]
+offset_left = -959.0
+offset_top = -332.0
+offset_right = -919.0
+offset_bottom = -292.0
+value = 100.0
+>>>>>>> Stashed changes
