@@ -1,13 +1,13 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1773529853
+::res://::1773530075
 ATTACK 1.png::CompressedTexture2D::5551601813084301836::1773517498::1773517510::1::::<><><>0<>0<>4d407ef9d5f593ca41b361f23f390d5a<>res://.godot/imported/ATTACK 1.png-a62497a43d84fb8de9fe1fb615c209a3.ctex::
-characterBody2d.gd::GDScript::1273844621969744805::1773529288::0::1::::<>CharacterBody2D<><>0<>0<><>::
-icon.svg::CompressedTexture2D::131893226184563982::1773517498::1773517745::1::::<><><>0<>0<>3d7546c4038c106f8e68e0d9ff126248<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+characterBody2d.gd::GDScript::1273844621969744805::1773530037::0::1::::<>CharacterBody2D<><>0<>0<><>::
+icon.svg::CompressedTexture2D::131893226184563982::1773517498::1773529939::1::::<><><>0<>0<>3d7546c4038c106f8e68e0d9ff126248<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 IDLE.png::CompressedTexture2D::7309761205714475071::1773517498::1773517510::1::::<><><>0<>0<>e40c1b0c277cf5d58dba891322c36610<>res://.godot/imported/IDLE.png-0b17fd4c8db677e649e8a850d5452a66.ctex::
-Japan map.png::CompressedTexture2D::4446419709600580164::1773529288::1773529288::1::::<><><>0<>0<>d554217f15fe8f27066b3a8b085eb1dc<>res://.godot/imported/Japan map.png-c8704a9b9c9f25d4f86bdf203cdfc6cc.ctex::
-Player.tscn::PackedScene::2251536882713773557::1773529832::0::1::::<><><>0<>0<><>::uid://sfcbgiju6vwn::::res://characterBody2d.gd<>uid://dce5x1e8k0v0r::::res://IDLE.png<>uid://cldicn2iierse::::res://ATTACK 1.png<>uid://7cbnlgaqlcr8::::res://RUN.png
+Japan map.png::CompressedTexture2D::4446419709600580164::1773530037::1773530037::1::::<><><>0<>0<>d554217f15fe8f27066b3a8b085eb1dc<>res://.godot/imported/Japan map.png-c8704a9b9c9f25d4f86bdf203cdfc6cc.ctex::
+Player.tscn::PackedScene::2251536882713773557::1773530037::0::1::::<><><>0<>0<><>::uid://sfcbgiju6vwn::::res://characterBody2d.gd<>uid://dce5x1e8k0v0r::::res://IDLE.png<>uid://cldicn2iierse::::res://ATTACK 1.png<>uid://7cbnlgaqlcr8::::res://RUN.png
 README.md::TextFile::-1::1773517498::0::1::::<><><>0<>0<><>::
-revzilla-hks-yellow-nissan-gt-r-4k-dy960e9hbyidd1ln.jpg::CompressedTexture2D::7023281320941618735::1773529288::1773529288::1::::<><><>0<>0<>89d37129894ee4e11460384d0c5dcaf9<>res://.godot/imported/revzilla-hks-yellow-nissan-gt-r-4k-dy960e9hbyidd1ln.jpg-05a0d46bb0bdb1f93a1e065f779aba62.ctex::
+revzilla-hks-yellow-nissan-gt-r-4k-dy960e9hbyidd1ln.jpg::CompressedTexture2D::7023281320941618735::1773530037::1773530037::1::::<><><>0<>0<>89d37129894ee4e11460384d0c5dcaf9<>res://.godot/imported/revzilla-hks-yellow-nissan-gt-r-4k-dy960e9hbyidd1ln.jpg-05a0d46bb0bdb1f93a1e065f779aba62.ctex::
 RUN.png::CompressedTexture2D::2250256271286180675::1773517498::1773517510::1::::<><><>0<>0<>a32cab0b0786faad591238ddbbea7a01<>res://.godot/imported/RUN.png-dda6aa1b9eaa94eecf4d2212801c28a5.ctex::
-World.tscn::PackedScene::7583180880231890652::1773529832::0::1::::<><><>0<>0<><>::uid://7cwqo6wwlxr6::::res://Player.tscn<>uid://b4l45ay6n8453::::res://Japan map.png
+World.tscn::PackedScene::7583180880231890652::1773530037::0::1::::<><><>0<>0<><>::uid://7cwqo6wwlxr6::::res://Player.tscn<>uid://b4l45ay6n8453::::res://Japan map.png
 worldScript.gd::GDScript::1831264673981717447::1773517498::0::1::::<>CharacterBody2D<><>0<>0<><>::
