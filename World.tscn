@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://7cwqo6wwlxr6" path="res://Player.tscn" id="2_bcbcq"]
 [ext_resource type="Texture2D" uid="uid://b4l45ay6n8453" path="res://Japan map.png" id="2_js7pq"]
+[ext_resource type="Texture2D" uid="uid://b45i6cfc638e" path="res://icon.svg" id="3_bcbcq"]
 
 [node name="World" type="Node2D" unique_id=846622534]
 
@@ -12,3 +13,7 @@ texture = ExtResource("2_js7pq")
 
 [node name="Player" parent="." unique_id=992779417 instance=ExtResource("2_bcbcq")]
 position = Vector2(-566, -4)
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1948903415]
+position = Vector2(529, 303)
+texture = ExtResource("3_bcbcq")
