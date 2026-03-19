@@ -2,7 +2,7 @@ extends CharacterBody2D
 var speed = 300.0
 var is_attacking = false
 var attack_damage = 10
-var jump_force = -1200.0
+var jump_force = -1450.0
 var gravity_scale = 4.5
 @onready var sprite = $AnimatedSprite2D
 func _physics_process(delta):
