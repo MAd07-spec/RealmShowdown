@@ -1,11 +1,20 @@
 [gd_scene format=3 uid="uid://dgbl47v6wq6vw"]
 
+[ext_resource type="Texture2D" uid="uid://c22ja6oahkdm" path="res://bg.png" id="2_2dftf"]
 [ext_resource type="PackedScene" uid="uid://bd1dt8r4ihexp" path="res://Player.tscn" id="2_bcbcq"]
 
 [node name="World" type="Node2D" unique_id=846622534]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=385666253]
-offset_right = 1067.0
-offset_bottom = 217.0
+offset_left = 1.0
+offset_top = 5.0
+offset_right = 1068.0
+offset_bottom = 222.0
 
 [node name="CharacterBody2D" parent="." unique_id=992779417 instance=ExtResource("2_bcbcq")]
+position = Vector2(2, 2)
+
+[node name="Bg" type="Sprite2D" parent="." unique_id=1299156259]
+position = Vector2(1, 4)
+scale = Vector2(0.14925344, 0.15270373)
+texture = ExtResource("2_2dftf")

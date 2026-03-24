@@ -180,7 +180,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 12.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -219,10 +219,12 @@ animations = [{
 script = ExtResource("1_kne1u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=867386054]
-position = Vector2(-39, 9.999999)
+position = Vector2(-103, 5.0000005)
 scale = Vector2(0.8548387, 0.9874552)
 sprite_frames = SubResource("SpriteFrames_e80uo")
-animation = &"idle"
+animation = &"attack"
+frame = 4
+frame_progress = 0.39806703
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=170499343]
 
