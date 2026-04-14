@@ -252,7 +252,7 @@ action_right = "p2_right"
 action_attack = "p2_attack"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=867386054]
-position = Vector2(-208.00002, 120)
+position = Vector2(-72.000015, 120)
 scale = Vector2(3.5688348, 2.9564395)
 sprite_frames = SubResource("SpriteFrames_e80uo")
 animation = &"death"
@@ -263,7 +263,7 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hitbox" unique_id=154912785]
-position = Vector2(-117, 115)
+position = Vector2(18, 103.5)
 shape = SubResource("RectangleShape2D_e80uo")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=576114257]
@@ -278,5 +278,5 @@ position = Vector2(66.5, 91)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=827993824]
-position = Vector2(-271.5, 19.5)
+position = Vector2(-143, 15.5)
 shape = SubResource("RectangleShape2D_r0ljg")
