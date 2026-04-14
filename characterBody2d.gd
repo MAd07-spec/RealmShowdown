@@ -42,12 +42,11 @@ func _ready() -> void:
 	right_limit = stage_right - half_screen
 	current_health = max_health
 
-	hitbox.monitoring  = false
-	hitbox.monitorable = false
+	hitbox.set_deferred("monitoring", false)
+	hitbox.set_deferred("monitorable", false)
 
 	hurtbox.area_entered.connect(_on_hurtbox_area_entered)
 
-	# Set correct initial facing for each player
 	sprite.flip_h = facing_dir == -1
 	_flip_hitbox(facing_dir)
 
@@ -83,9 +82,24 @@ func _physics_process(_delta: float) -> void:
 		start_attack()
 
 	_update_animation(direction)
+	_update_facing(direction)
 
-	# Update facing direction and flip hitbox when moving
-	if direction < 0:
+# ---------------------------------------------------------------
+func _update_facing(direction: int) -> void:
+	if direction == 0:
+		# Standing still — face the opponent automatically
+		if opponent and is_instance_valid(opponent):
+			if opponent.position.x < position.x:
+				sprite.flip_h = true
+				if facing_dir != -1:
+					facing_dir = -1
+					_flip_hitbox(-1)
+			else:
+				sprite.flip_h = false
+				if facing_dir != 1:
+					facing_dir = 1
+					_flip_hitbox(1)
+	elif direction < 0:
 		sprite.flip_h = true
 		if facing_dir != -1:
 			facing_dir = -1
@@ -98,8 +112,11 @@ func _physics_process(_delta: float) -> void:
 
 # ---------------------------------------------------------------
 func _flip_hitbox(dir: int) -> void:
-	if hitbox_shape:
-		hitbox_shape.position.x = abs(hitbox_shape.position.x) * dir
+	var shape = get_node_or_null("Hitbox/CollisionShape2D2")
+	if shape == null:
+		push_error(name + ": Could not find Hitbox/CollisionShape2D2")
+		return
+	shape.position.x = abs(shape.position.x) * dir
 
 # ---------------------------------------------------------------
 func _update_animation(direction: int) -> void:
@@ -116,13 +133,13 @@ func _update_animation(direction: int) -> void:
 # ---------------------------------------------------------------
 func start_attack() -> void:
 	is_attacking = true
-	hitbox.monitoring  = true
-	hitbox.monitorable = true
+	hitbox.set_deferred("monitoring", true)
+	hitbox.set_deferred("monitorable", true)
 	sprite.play("attack")
 	await sprite.animation_finished
 	if not is_dead:
-		hitbox.monitoring  = false
-		hitbox.monitorable = false
+		hitbox.set_deferred("monitoring", false)
+		hitbox.set_deferred("monitorable", false)
 		is_attacking = false
 
 # ---------------------------------------------------------------
@@ -155,8 +172,8 @@ func play_hurt() -> void:
 		return
 	is_hurt = true
 	is_attacking = false
-	hitbox.monitoring  = false
-	hitbox.monitorable = false
+	hitbox.set_deferred("monitoring", false)
+	hitbox.set_deferred("monitorable", false)
 	sprite.play("hurt")
 	await sprite.animation_finished
 	if not is_dead:
@@ -174,8 +191,8 @@ func die() -> void:
 	is_dead      = true
 	is_hurt      = false
 	is_attacking = false
-	hitbox.monitoring  = false
-	hitbox.monitorable = false
+	hitbox.set_deferred("monitoring", false)
+	hitbox.set_deferred("monitorable", false)
 	sprite.play("death")
 	player_died.emit()
 	await sprite.animation_finished
