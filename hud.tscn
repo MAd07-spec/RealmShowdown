@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://cdfyys5ou6br4"]
+
+[ext_resource type="Script" uid="uid://chn6w75n2eis0" path="res://hud.gd" id="1_37p78"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n2snw"]
+bg_color = Color(0, 0, 0, 0.6)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37p78"]
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64ctp"]
+bg_color = Color(0.73366183, 0.5792188, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8sq4i"]
+bg_color = Color(0, 0, 0, 0.6)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="LabelSettings" id="LabelSettings_640wx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a2258"]
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xsix"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="HUD" type="CanvasLayer" unique_id=394078953]
+script = ExtResource("1_37p78")
+
+[node name="Control" type="Control" parent="." unique_id=345359923]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="P1Container" type="PanelContainer" parent="Control" unique_id=2127937821]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 2.0
+anchor_bottom = 10.0
+offset_left = 260.0
+offset_top = 92.0
+offset_right = 540.0
+offset_bottom = -210.0
+pivot_offset = Vector2(20, 20)
+tooltip_text = "Player 1"
+theme_override_styles/panel = SubResource("StyleBoxFlat_n2snw")
+
+[node name="P1VBox" type="VBoxContainer" parent="Control/P1Container" unique_id=1143307552]
+layout_mode = 2
+
+[node name="P1Label" type="Label" parent="Control/P1Container/P1VBox" unique_id=1904988032]
+layout_mode = 2
+text = "Player 1"
+horizontal_alignment = 1
+
+[node name="P1HealthBar" type="ProgressBar" parent="Control/P1Container/P1VBox" unique_id=1308840847]
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_37p78")
+theme_override_styles/fill = SubResource("StyleBoxFlat_64ctp")
+value = 100.0
+
+[node name="P2Container" type="PanelContainer" parent="Control" unique_id=1371736831]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 30.0
+anchor_top = 2.0
+anchor_right = 30.0
+anchor_bottom = 2.0
+offset_left = 73.0
+offset_top = 50.0
+offset_right = 393.0
+offset_bottom = 109.0
+grow_horizontal = 0
+pivot_offset = Vector2(-20, -20)
+tooltip_text = "Player 2"
+theme_override_styles/panel = SubResource("StyleBoxFlat_8sq4i")
+
+[node name="P2VBox" type="VBoxContainer" parent="Control/P2Container" unique_id=995938340]
+layout_mode = 2
+
+[node name="P2Label" type="Label" parent="Control/P2Container/P2VBox" unique_id=734419280]
+layout_mode = 2
+text = "Player 2"
+label_settings = SubResource("LabelSettings_640wx")
+horizontal_alignment = 1
+
+[node name="P2HealthBar" type="ProgressBar" parent="Control/P2Container/P2VBox" unique_id=168531702]
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_a2258")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1xsix")
+value = 100.0
+fill_mode = 1

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dgbl47v6wq6vw"]
+
+[ext_resource type="Script" uid="uid://dxe1uitw63yjg" path="res://world.gd" id="1_js7pq"]
+[ext_resource type="PackedScene" uid="uid://7cwqo6wwlxr6" path="res://Player.tscn" id="2_bcbcq"]
+[ext_resource type="Texture2D" uid="uid://cssgcmlgdaw30" path="res://brownthommas.png" id="2_eu7l1"]
+[ext_resource type="PackedScene" uid="uid://bugee3005sry4" path="res://Player2.tscn" id="3_bcbcq"]
+[ext_resource type="PackedScene" uid="uid://cdfyys5ou6br4" path="res://hud.tscn" id="5_eu7l1"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_eu7l1"]
+normal = Vector2(-0.004319614, -0.99999064)
+distance = -378.0
+
+[node name="World" type="Node2D" unique_id=846622534]
+script = ExtResource("1_js7pq")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1447634756]
+position = Vector2(-312.00003, -21.000002)
+scale = Vector2(0.85, 0.775)
+texture = ExtResource("2_eu7l1")
+
+[node name="Player" parent="." unique_id=829392900 instance=ExtResource("2_bcbcq")]
+position = Vector2(-335, 13)
+speed = 230.0
+
+[node name="Player2" parent="." unique_id=992779417 instance=ExtResource("3_bcbcq")]
+position = Vector2(360, 1)
+speed = 230.0
+
+[node name="HUD" parent="." unique_id=394078953 instance=ExtResource("5_eu7l1")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1538626660]
+shape = SubResource("WorldBoundaryShape2D_eu7l1")
