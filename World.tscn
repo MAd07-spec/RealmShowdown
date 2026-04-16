@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://f2i363kaf75c" path="res://Ocean-map.jpg" id="1_2dftf"]
 [ext_resource type="PackedScene" uid="uid://7cwqo6wwlxr6" path="res://Player.tscn" id="2_bcbcq"]
 [ext_resource type="PackedScene" uid="uid://d3yje8cdto0rm" path="res://Player_two.tscn" id="3_bcbcq"]
+[ext_resource type="Script" uid="uid://bbx2i4nt4nfx4" path="res://player.gd" id="4_eu7l1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dftf"]
 size = Vector2(1279, 75)
@@ -27,6 +28,8 @@ shape = SubResource("RectangleShape2D_2dftf")
 
 [node name="Player" parent="." unique_id=992779417 instance=ExtResource("2_bcbcq")]
 position = Vector2(-401, 131)
+script = ExtResource("4_eu7l1")
+player_id = 1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=346116226]
 
@@ -44,3 +47,5 @@ shape = SubResource("RectangleShape2D_js7pq")
 
 [node name="Player2" parent="." unique_id=1085921638 instance=ExtResource("3_bcbcq")]
 position = Vector2(335, 140)
+script = ExtResource("4_eu7l1")
+player_id = 2
