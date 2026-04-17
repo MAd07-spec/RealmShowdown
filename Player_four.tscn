@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://tdor026vmvjb"]
+
+[ext_resource type="Script" uid="uid://dnkba6gtk00hi" path="res://player.gd" id="1_vfsyh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e80uo"]
+animations = [{
+"frames": [],
+"loop": false,
+"name": &"attack",
+"speed": 15.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"hurt",
+"speed": 8.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"running",
+"speed": 15.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e80uo"]
+radius = 57.0
+height = 278.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72slw"]
+size = Vector2(205, 205)
+
+[node name="Player4" type="CharacterBody2D" unique_id=992779417]
+floor_max_angle = 0.0
+floor_snap_length = 0.0
+script = ExtResource("1_vfsyh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=867386054]
+position = Vector2(76, -120)
+scale = Vector2(0.2666454, 0.28721106)
+sprite_frames = SubResource("SpriteFrames_e80uo")
+animation = &"running"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1438248990]
+position = Vector2(61, -97)
+shape = SubResource("CapsuleShape2D_e80uo")
+
+[node name="AttackHitbox" type="Area2D" parent="." unique_id=1129273492]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackHitbox" unique_id=247468425]
+position = Vector2(-106, -113)
+shape = SubResource("RectangleShape2D_72slw")
