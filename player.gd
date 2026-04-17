@@ -1,7 +1,5 @@
 extends CharacterBody2D
-
 @export var player_id: int = 1
-
 var speed = 300.0
 var is_attacking = false
 var attack_damage = 10
@@ -13,19 +11,16 @@ var already_hit = false
 var max_stamina = 100.0
 var current_stamina = 100.0
 var stamina_regen_rate = 15.0 
-
+var is_hurt = false
 @onready var sprite = $AnimatedSprite2D
-@onready var hitbox = $AttackHitbox  # Area2D you'll add
-
+@onready var hitbox = $AttackHitbox
 var action_left: String
 var action_right: String
 var action_jump: String
 var action_attack: String
-
 signal health_changed(player_id, new_health)
 signal player_died(player_id)
 signal stamina_changed(player_id, new_stamina)
-
 
 # INITIALISE PLAYER INPUTS AND HITBOX
 func _ready():
@@ -33,7 +28,6 @@ func _ready():
 	action_right  = "p%d_right"  % player_id
 	action_jump   = "p%d_jump"   % player_id
 	action_attack = "p%d_attack" % player_id
-	
 	hitbox.monitoring = false  
 	hitbox.body_entered.connect(_on_attack_hitbox_body_entered)
 
@@ -55,19 +49,19 @@ func _physics_process(delta):
 	if Input.is_action_pressed(action_left):
 		direction = -1
 	velocity.x = direction * speed
-	
+
 	# STAMINA REGEN
 	if not is_attacking:
 		current_stamina = min(current_stamina + stamina_regen_rate * delta, max_stamina)
-		emit_signal("stamina_changed", player_id, current_stamina) 
-	
+		emit_signal("stamina_changed", player_id, current_stamina)
+
 	# JUMP
 	if Input.is_action_just_pressed(action_jump) and is_on_floor():
 		velocity.y = jump_force
 	move_and_slide()
 
 	# ATTACK
-	if Input.is_action_just_pressed(action_attack) and not is_attacking and not is_attacking and current_stamina >0:
+	if Input.is_action_just_pressed(action_attack) and not is_attacking and not is_hurt and current_stamina > 0:
 		is_attacking = true
 		already_hit = false
 		current_stamina -= 20.0
@@ -79,7 +73,10 @@ func _physics_process(delta):
 		enable_hitbox()
 
 	# ANIMATIONS
-	if is_attacking:
+	if is_hurt:
+		if not sprite.is_playing():
+			is_hurt = false
+	elif is_attacking:
 		if not sprite.is_playing():
 			is_attacking = false
 			hitbox.monitoring = false
@@ -91,14 +88,14 @@ func _physics_process(delta):
 
 	# FLIP - face the opponent
 	var opponent_path = "/root/World/Player" if player_id == 2 else "/root/World/Player2"
-	var opponent = get_node(opponent_path)
+	var opponent = get_node_or_null(opponent_path)
 	if direction == 0:
 		if opponent:
 			sprite.flip_h = opponent.position.x < position.x
 	else:
 		sprite.flip_h = direction == -1
 
-	# Position hitbox in front of player
+	# POSITION HITBOX IN FRONT OF PLAYER
 	if sprite.flip_h:
 		hitbox.position.x = -40
 	else:
@@ -116,10 +113,10 @@ func take_damage(amount: int):
 	if current_health <= 0:
 		emit_signal("player_died", player_id)
 		print("Player %d has died!" % player_id)
-		#here is where the player dissapears after reacheing 0 health
-		visible = false
 		queue_free()
-		
+	else:
+		is_hurt = true
+		sprite.play("hurt")
 
 func _on_attack_hitbox_body_entered(body):
 	print("Hitbox hit: ", body.name)
