@@ -28,5 +28,27 @@ speed = 230.0
 
 [node name="HUD" parent="." unique_id=394078953 instance=ExtResource("5_eu7l1")]
 
+<<<<<<< Updated upstream
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1538626660]
 shape = SubResource("WorldBoundaryShape2D_eu7l1")
+=======
+[node name="Camera2D" type="Camera2D" parent="." unique_id=346116226]
+
+[node name="wall left" type="StaticBody2D" parent="." unique_id=1842554657]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall left" unique_id=293206244]
+position = Vector2(-643.5, -55.75)
+shape = SubResource("RectangleShape2D_bcbcq")
+
+[node name="wall right" type="StaticBody2D" parent="." unique_id=974380338]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall right" unique_id=141136282]
+position = Vector2(639.25, -58.5)
+shape = SubResource("RectangleShape2D_js7pq")
+
+[node name="Player2" parent="." unique_id=1085921638 instance=ExtResource("3_bcbcq")]
+position = Vector2(336, 169)
+player_id = 2
+
+[node name="hud" parent="." unique_id=1196102551 instance=ExtResource("4_js7pq")]
+>>>>>>> Stashed changes

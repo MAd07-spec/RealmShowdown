@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4l603e0reeuu"
-path="res://.godot/imported/Death.png-14200ca784827aab4d0a32aa282bc1c9.ctex"
+uid="uid://b0bb01hauqo56"
+path="res://.godot/imported/fightersprite.png-68e5e318161a60a180110f45ab119369.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://knight/Death.png"
-dest_files=["res://.godot/imported/Death.png-14200ca784827aab4d0a32aa282bc1c9.ctex"]
+source_file="res://alien/fightersprite.png"
+dest_files=["res://.godot/imported/fightersprite.png-68e5e318161a60a180110f45ab119369.ctex"]
 
 [params]
 
