@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dgbl47v6wq6vw"]
 
 [ext_resource type="Texture2D" uid="uid://f2i363kaf75c" path="res://Ocean-map.jpg" id="1_2dftf"]
+[ext_resource type="Script" uid="uid://dxe1uitw63yjg" path="res://world.gd" id="1_eu7l1"]
 [ext_resource type="PackedScene" uid="uid://7cwqo6wwlxr6" path="res://Player.tscn" id="2_bcbcq"]
 [ext_resource type="PackedScene" uid="uid://d3yje8cdto0rm" path="res://Player_two.tscn" id="3_bcbcq"]
 [ext_resource type="PackedScene" uid="uid://cdfyys5ou6br4" path="res://hud.tscn" id="4_js7pq"]
@@ -15,6 +16,7 @@ size = Vector2(5, 602.5)
 size = Vector2(0.5, 607)
 
 [node name="World" type="Node2D" unique_id=846622534]
+script = ExtResource("1_eu7l1")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1447634756]
 scale = Vector2(0.8185897, 0.82909924)

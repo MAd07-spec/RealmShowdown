@@ -9,7 +9,10 @@ var jump_force = -1550.0
 var gravity_scale = 4.0
 var max_health = 100
 var current_health = 100
-var already_hit = false  # prevents multiple hits per swing
+var already_hit = false  
+var max_stamina = 100.0
+var current_stamina = 100.0
+var stamina_regen_rate = 15.0 
 
 @onready var sprite = $AnimatedSprite2D
 @onready var hitbox = $AttackHitbox  # Area2D you'll add
@@ -21,6 +24,7 @@ var action_attack: String
 
 signal health_changed(player_id, new_health)
 signal player_died(player_id)
+signal stamina_changed(player_id, new_stamina)
 
 
 # INITIALISE PLAYER INPUTS AND HITBOX
@@ -51,16 +55,24 @@ func _physics_process(delta):
 	if Input.is_action_pressed(action_left):
 		direction = -1
 	velocity.x = direction * speed
-
+	
+	# STAMINA REGEN
+	if not is_attacking:
+		current_stamina = min(current_stamina + stamina_regen_rate * delta, max_stamina)
+		emit_signal("stamina_changed", player_id, current_stamina) 
+	
 	# JUMP
 	if Input.is_action_just_pressed(action_jump) and is_on_floor():
 		velocity.y = jump_force
 	move_and_slide()
 
 	# ATTACK
-	if Input.is_action_just_pressed(action_attack) and not is_attacking:
+	if Input.is_action_just_pressed(action_attack) and not is_attacking and not is_attacking and current_stamina >0:
 		is_attacking = true
 		already_hit = false
+		current_stamina -= 20.0
+		current_stamina = max(current_stamina, 0.0)
+		emit_signal("stamina_changed", player_id, current_stamina)
 		sprite.play("attack")
 		print("Player %d Attack! Damage: %d" % [player_id, attack_damage])
 		await get_tree().create_timer(0.15).timeout
@@ -93,7 +105,7 @@ func _physics_process(delta):
 		hitbox.position.x = 40
 
 func enable_hitbox():
-	if not already_hit:
+	if not already_hit and current_stamina > 0:
 		hitbox.monitoring = true
 
 func take_damage(amount: int):
