@@ -5,7 +5,7 @@ extends CharacterBody2D
 var speed = 300.0
 var is_attacking = false
 var attack_damage = 10
-var jump_force = -1450.0
+var jump_force = -1550.0
 var gravity_scale = 4.0
 var max_health = 100
 var current_health = 100
@@ -22,12 +22,16 @@ var action_attack: String
 signal health_changed(player_id, new_health)
 signal player_died(player_id)
 
+
+# INITIALISE PLAYER INPUTS AND HITBOX
 func _ready():
 	action_left   = "p%d_left"   % player_id
 	action_right  = "p%d_right"  % player_id
 	action_jump   = "p%d_jump"   % player_id
 	action_attack = "p%d_attack" % player_id
-	hitbox.monitoring = false  # hitbox off by default
+	
+	hitbox.monitoring = false  
+	hitbox.body_entered.connect(_on_attack_hitbox_body_entered)
 
 func _physics_process(delta):
 	floor_stop_on_slope = false
@@ -59,6 +63,8 @@ func _physics_process(delta):
 		already_hit = false
 		sprite.play("attack")
 		print("Player %d Attack! Damage: %d" % [player_id, attack_damage])
+		await get_tree().create_timer(0.15).timeout
+		enable_hitbox()
 
 	# ANIMATIONS
 	if is_attacking:
@@ -75,7 +81,8 @@ func _physics_process(delta):
 	var opponent_path = "/root/World/Player" if player_id == 2 else "/root/World/Player2"
 	var opponent = get_node(opponent_path)
 	if direction == 0:
-		sprite.flip_h = opponent.position.x < position.x
+		if opponent:
+			sprite.flip_h = opponent.position.x < position.x
 	else:
 		sprite.flip_h = direction == -1
 
@@ -97,11 +104,16 @@ func take_damage(amount: int):
 	if current_health <= 0:
 		emit_signal("player_died", player_id)
 		print("Player %d has died!" % player_id)
+		#here is where the player dissapears after reacheing 0 health
+		visible = false
+		queue_free()
+		
 
 func _on_attack_hitbox_body_entered(body):
+	print("Hitbox hit: ", body.name)
 	if already_hit:
 		return
-	if body != self and body.has_method("take_damage"):
+	if body.has_method("take_damage") and body.player_id != player_id:
 		body.take_damage(attack_damage)
 		already_hit = true
 		hitbox.monitoring = false

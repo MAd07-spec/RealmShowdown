@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cdfyys5ou6br4"]
+
+[ext_resource type="Script" uid="uid://chn6w75n2eis0" path="res://hud.gd" id="1_37p78"]
+
+[node name="hud" type="CanvasLayer" unique_id=1196102551]
+script = ExtResource("1_37p78")
+
+[node name="P1HealthBar" type="ProgressBar" parent="." unique_id=1406603885]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 320.0
+offset_bottom = 50.0
+value = 100.0
+
+[node name="P2HealthBar" type="ProgressBar" parent="." unique_id=1621462021]
+offset_left = 956.0
+offset_top = 16.0
+offset_right = 1256.0
+offset_bottom = 46.0
+value = 100.0

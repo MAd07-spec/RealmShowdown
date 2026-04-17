@@ -60,3 +60,7 @@ func _physics_process(delta):
 			sprite.flip_h = false
 		elif direction == -1:
 			sprite.flip_h = true
+
+
+func _on_attack_hitbox_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
