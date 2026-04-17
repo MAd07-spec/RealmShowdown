@@ -65,7 +65,6 @@ func _physics_process(_delta: float) -> void:
 	velocity.y = 0
 	move_and_slide()
 
-	position.x = clamp(position.x, left_limit, right_limit)
 
 	# Block movement through opponent
 	if opponent and is_instance_valid(opponent):
