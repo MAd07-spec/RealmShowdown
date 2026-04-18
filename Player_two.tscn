@@ -239,33 +239,48 @@ animations = [{
 "speed": 15.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e80uo"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0vwx3"]
 radius = 57.0
 height = 278.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_72slw"]
+<<<<<<< HEAD
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2e07v"]
 size = Vector2(205, 205)
+=======
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72slw"]
+size = Vector2(47.5, 205)
+>>>>>>> a3de3300725ef6d0dd07de04d8ba385782251705
 
 [node name="Player2" type="CharacterBody2D" unique_id=992779417]
 floor_max_angle = 0.0
 floor_snap_length = 0.0
 script = ExtResource("1_72slw")
+player_id = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=867386054]
 position = Vector2(70, -111.00001)
 scale = Vector2(4.737163, 6.2756896)
 sprite_frames = SubResource("SpriteFrames_e80uo")
-animation = &"attack"
-frame = 6
-frame_progress = 1.0
+animation = &"idle"
 
+<<<<<<< HEAD
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=903393139]
+position = Vector2(62, -97)
+shape = SubResource("CapsuleShape2D_0vwx3")
+=======
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1438248990]
-position = Vector2(61, -97)
+position = Vector2(95, -96)
 shape = SubResource("CapsuleShape2D_e80uo")
+>>>>>>> a3de3300725ef6d0dd07de04d8ba385782251705
 
-[node name="AttackHitbox" type="Area2D" parent="." unique_id=1129273492]
-collision_layer = 0
+[node name="AttackHitbox" type="Area2D" parent="." unique_id=1893690476]
 
+<<<<<<< HEAD
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackHitbox" unique_id=763203333]
+position = Vector2(-107, -97)
+shape = SubResource("RectangleShape2D_2e07v")
+=======
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackHitbox" unique_id=247468425]
-position = Vector2(-106, -113)
+position = Vector2(3.75, -117)
 shape = SubResource("RectangleShape2D_72slw")
+>>>>>>> a3de3300725ef6d0dd07de04d8ba385782251705
