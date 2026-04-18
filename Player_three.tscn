@@ -109,7 +109,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"running",
-"speed": 15.0
+"speed": 18.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e80uo"]
@@ -128,7 +128,9 @@ script = ExtResource("1_35ckh")
 position = Vector2(75.00003, -136.00006)
 scale = Vector2(0.24729083, 0.2604223)
 sprite_frames = SubResource("SpriteFrames_e80uo")
-animation = &"idle"
+animation = &"attack"
+frame = 5
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1438248990]
 position = Vector2(61, -97)
