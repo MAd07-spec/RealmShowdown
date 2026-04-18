@@ -89,17 +89,24 @@ func _physics_process(delta):
 	# FLIP - face the opponent
 	var opponent_path = "/root/World/Player" if player_id == 2 else "/root/World/Player2"
 	var opponent = get_node_or_null(opponent_path)
-	if direction == 0:
-		if opponent:
+	if opponent:
+		if direction == 0:
 			sprite.flip_h = opponent.position.x < position.x
-	else:
-		sprite.flip_h = direction == -1
+		else:
+			sprite.flip_h = direction == -1
+			# OVERRIDE - if moving but opponent crossed sides, flip instantly
+			if direction == 1 and opponent.position.x < position.x:
+				sprite.flip_h = true
+			elif direction == -1 and opponent.position.x > position.x:
+				sprite.flip_h = false
 
 	# POSITION HITBOX IN FRONT OF PLAYER
 	if sprite.flip_h:
 		hitbox.position.x = -40
 	else:
 		hitbox.position.x = 40
+	# DEBUG - remove after fixing
+	print("Player ", player_id, " hitbox pos: ", hitbox.global_position, " flip: ", sprite.flip_h)
 
 func enable_hitbox():
 	if not already_hit and current_stamina > 0:
