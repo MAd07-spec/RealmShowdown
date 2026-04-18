@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q1t5dodrinny"
-path="res://.godot/imported/Japanbg.png-f96e1887e3bba4a10d131d9c536e7639.ctex"
+uid="uid://olg7h0ugrlu5"
+path="res://.godot/imported/spaceBG.png-60d5cbd38a5b033b5aecc60f7f74b599.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://alien/Japanbg.png"
-dest_files=["res://.godot/imported/Japanbg.png-f96e1887e3bba4a10d131d9c536e7639.ctex"]
+source_file="res://maps/spaceBG.png"
+dest_files=["res://.godot/imported/spaceBG.png-60d5cbd38a5b033b5aecc60f7f74b599.ctex"]
 
 [params]
 
