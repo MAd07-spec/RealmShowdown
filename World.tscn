@@ -54,3 +54,4 @@ position = Vector2(335, 140)
 [node name="Player3" parent="." unique_id=1071068249 instance=ExtResource("6_p1v5b")]
 visible = false
 position = Vector2(318, 132)
+player_id = 3
