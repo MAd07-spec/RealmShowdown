@@ -30,7 +30,7 @@ position = Vector2(1, 284)
 shape = SubResource("RectangleShape2D_2dftf")
 
 [node name="Player" parent="." unique_id=992779417 instance=ExtResource("2_bcbcq")]
-position = Vector2(-401, 131)
+position = Vector2(-412, 123)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=346116226]
 
@@ -48,11 +48,10 @@ shape = SubResource("RectangleShape2D_js7pq")
 
 [node name="Player2" parent="." unique_id=1085921638 instance=ExtResource("3_bcbcq")]
 position = Vector2(335, 140)
-player_id = 2
 
 [node name="hud" parent="." unique_id=1196102551 instance=ExtResource("4_js7pq")]
 
 [node name="Player3" parent="." unique_id=1071068249 instance=ExtResource("6_p1v5b")]
 visible = false
 position = Vector2(318, 132)
-player_id = 2
+player_id = 3
