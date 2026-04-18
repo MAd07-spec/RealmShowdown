@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://olg7h0ugrlu5"
-path="res://.godot/imported/spaceBG.png-60d5cbd38a5b033b5aecc60f7f74b599.ctex"
+uid="uid://f2i363kaf75c"
+path="res://.godot/imported/Ocean-map.jpg-a89190d10113af668ac6df0954eeab2f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://maps/spaceBG.png"
-dest_files=["res://.godot/imported/spaceBG.png-60d5cbd38a5b033b5aecc60f7f74b599.ctex"]
+source_file="res://Ocean-map.jpg"
+dest_files=["res://.godot/imported/Ocean-map.jpg-a89190d10113af668ac6df0954eeab2f.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://q1t5dodrinny"
-path="res://.godot/imported/Japanbg.png-105ef11fb3c851cb26c118aacc8e7462.ctex"
+path="res://.godot/imported/Japanbg.png-f96e1887e3bba4a10d131d9c536e7639.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://maps/Japanbg.png"
-dest_files=["res://.godot/imported/Japanbg.png-105ef11fb3c851cb26c118aacc8e7462.ctex"]
+source_file="res://alien/Japanbg.png"
+dest_files=["res://.godot/imported/Japanbg.png-f96e1887e3bba4a10d131d9c536e7639.ctex"]
 
 [params]
 

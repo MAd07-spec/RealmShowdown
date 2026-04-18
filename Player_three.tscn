@@ -123,7 +123,6 @@ size = Vector2(205, 205)
 floor_max_angle = 0.0
 floor_snap_length = 0.0
 script = ExtResource("1_35ckh")
-player_id = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=867386054]
 position = Vector2(75.00003, -136.00006)

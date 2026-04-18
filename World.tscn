@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dgbl47v6wq6vw"]
 
-[ext_resource type="Texture2D" uid="uid://f2i363kaf75c" path="res://maps/Ocean-map.jpg" id="1_2dftf"]
+[ext_resource type="Texture2D" uid="uid://f2i363kaf75c" path="res://Ocean-map.jpg" id="1_2dftf"]
 [ext_resource type="Script" uid="uid://dxe1uitw63yjg" path="res://world.gd" id="1_eu7l1"]
 [ext_resource type="PackedScene" uid="uid://7cwqo6wwlxr6" path="res://Player.tscn" id="2_bcbcq"]
 [ext_resource type="PackedScene" uid="uid://d3yje8cdto0rm" path="res://Player_two.tscn" id="3_bcbcq"]
@@ -47,10 +47,12 @@ position = Vector2(639.25, -58.5)
 shape = SubResource("RectangleShape2D_js7pq")
 
 [node name="Player2" parent="." unique_id=1085921638 instance=ExtResource("3_bcbcq")]
-visible = false
 position = Vector2(335, 140)
+player_id = 2
 
 [node name="hud" parent="." unique_id=1196102551 instance=ExtResource("4_js7pq")]
 
 [node name="Player3" parent="." unique_id=1071068249 instance=ExtResource("6_p1v5b")]
+visible = false
 position = Vector2(318, 132)
+player_id = 2
