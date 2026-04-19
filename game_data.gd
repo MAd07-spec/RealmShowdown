@@ -1,9 +1,9 @@
-# GameData.gd
 extends Node
 
-var selected_map: String = "space"  # default map
+var selected_map: String = "space"
+var p1_character: String = "alien"
+var p2_character: String = "knight"
 
-# Map registry: id → { name, scene_path, preview_texture }
 var maps := {
 	"space": {
 		"name": "Space Splatter",
@@ -24,5 +24,28 @@ var maps := {
 		"name": "Candy Chaos",
 		"scene": "res://candyland.tscn",
 		"preview": "res://maps/candy-land.png"
+	}
+}
+
+var characters := {
+	"alien": {
+		"name": "Alien",
+		"scene": "res://Player.tscn",
+		"preview": "res://alien/fightersprite.png"
+	},
+	"knight": {
+		"name": "Knight",
+		"scene": "res://Player2.tscn",
+		"preview": "res://knight/knight-preview.png"
+	},
+	"sensei": {
+		"name": "Sensei",
+		"scene": "res://Player3.tscn",
+		"preview": "res://sensei/sensei-preview.png"
+	},
+	"goldy": {
+		"name": "Goldy",
+		"scene": "res://Player4.tscn",
+		"preview": "res://goldy/goldy-preview.png"
 	}
 }
