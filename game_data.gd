@@ -1,7 +1,7 @@
 extends Node
 
 var selected_map: String = "space"
-var p1_character: String = "alien"
+var p1_character: String = "sensei"
 var p2_character: String = "knight"
 
 var maps := {
@@ -30,22 +30,38 @@ var maps := {
 var characters := {
 	"alien": {
 		"name": "Alien",
-		"scene": "res://Player.tscn",
-		"preview": "res://alien/fightersprite.png"
+		"frames": preload("res://alien/alien_frames.tres"),
+		"preview": "res://alien/fightersprite.png",
+		"scale": Vector2(0.29, 0.29),
+		"sprite_offset": Vector2(70.0, -105.0)
+		
+		
 	},
 	"knight": {
 		"name": "Knight",
-		"scene": "res://Player2.tscn",
-		"preview": "res://knight/knight-preview.png"
+		"frames": preload("res://knight/knight_frames.tres"),
+		"preview": "res://knight/knight-preview.png",
+		"scale": Vector2(4.737, 6.276),
+		"sprite_offset": Vector2(70.0, -110.0)
+		
+
 	},
 	"sensei": {
 		"name": "Sensei",
-		"scene": "res://Player3.tscn",
-		"preview": "res://sensei/sensei-preview.png"
+		"frames": preload("res://sensei/sensei_frames.tres"),
+		"preview": "res://sensei/sensei-preview.png",
+		"scale": Vector2(6.63, 8.274),
+		"sprite_offset": Vector2(59.766, -232.867)
+		
+
 	},
 	"goldy": {
 		"name": "Goldy",
-		"scene": "res://Player4.tscn",
-		"preview": "res://goldy/goldy-preview.png"
+		"frames": preload("res://goldy/goldy_frames.tres"),
+		"preview": "res://goldy/goldy-preview.png",
+		"scale": Vector2(6.63, 8.274),
+		"sprite_offset": Vector2(70.0, -110.0)
+		
+
 	}
 }
