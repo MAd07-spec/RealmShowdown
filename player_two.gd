@@ -19,23 +19,23 @@ func _physics_process(delta):
 
 	# MOVEMENT
 	var direction = 0
-	if Input.is_action_pressed("p1_right"):
+	if Input.is_action_pressed("p2_right"):
 		direction = 1
-	if Input.is_action_pressed("p1_left"):
+	if Input.is_action_pressed("p2_left"):
 		direction = -1
 	velocity.x = direction * speed
 
 	# JUMP
-	if Input.is_action_just_pressed("p1_jump") and is_on_floor():
+	if Input.is_action_just_pressed("p2_jump") and is_on_floor():
 		velocity.y = jump_force
 
 	move_and_slide()
 
 	# ATTACK
-	if Input.is_action_just_pressed("p1_attack") and not is_attacking:
+	if Input.is_action_just_pressed("p2_attack") and not is_attacking:
 		is_attacking = true
 		sprite.play("attack")
-		print("Player 2 Attack! Damage:", attack_damage)
+		print("Player 1 Attack! Damage:", attack_damage)
 
 	# ANIMATIONS
 	if is_attacking:

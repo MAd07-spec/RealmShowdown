@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://cdfyys5ou6br4"]
+
+[ext_resource type="Script" uid="uid://chn6w75n2eis0" path="res://hud.gd" id="1_37p78"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37p78"]
+bg_color = Color(0, 0.61151123, 0.52702785, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64ctp"]
+bg_color = Color(0, 0.6117647, 0.5254902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8sq4i"]
+bg_color = Color(0.24043033, 0.4347694, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_640wx"]
+bg_color = Color(0.23921569, 0.43529412, 1, 1)
+
+[node name="hud" type="CanvasLayer" unique_id=1196102551]
+script = ExtResource("1_37p78")
+
+[node name="P1HealthBar" type="ProgressBar" parent="." unique_id=1406603885]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 533.0
+offset_bottom = 68.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_37p78")
+value = 100.0
+
+[node name="P2HealthBar" type="ProgressBar" parent="." unique_id=1621462021]
+offset_left = 721.0
+offset_top = 21.0
+offset_right = 1256.0
+offset_bottom = 67.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_64ctp")
+value = 100.0
+
+[node name="P1StaminaBar" type="ProgressBar" parent="." unique_id=448414089]
+offset_left = 29.0
+offset_top = 75.0
+offset_right = 373.0
+offset_bottom = 102.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_8sq4i")
+value = 100.0
+
+[node name="P2StaminaBar" type="ProgressBar" parent="." unique_id=979978207]
+offset_left = 900.0
+offset_top = 75.0
+offset_right = 1246.0
+offset_bottom = 102.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_640wx")
+value = 100.0
