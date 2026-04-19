@@ -102,9 +102,9 @@ func _physics_process(delta):
 
 	# POSITION HITBOX IN FRONT OF PLAYER
 	if sprite.flip_h:
-		hitbox.position.x = -40
+		hitbox.position.x = -80
 	else:
-		hitbox.position.x = 40
+		hitbox.position.x = 80
 	# DEBUG - remove after fixing
 	print("Player ", player_id, " hitbox pos: ", hitbox.global_position, " flip: ", sprite.flip_h)
 
