@@ -59,8 +59,8 @@ var characters := {
 		"name": "Goldy",
 		"frames": preload("res://goldy/goldy_frames.tres"),
 		"preview": "res://goldy/goldy-preview.png",
-		"scale": Vector2(6.63, 8.274),
-		"sprite_offset": Vector2(70.0, -110.0)
+		"scale": Vector2(2.50, 2.50),
+		"sprite_offset": Vector2(70.0, -90.0)
 		
 
 	}
