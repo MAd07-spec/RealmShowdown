@@ -168,7 +168,7 @@ offset_bottom = 46.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_p2rio")
-expand_mode = 2
+expand_mode = 5
 stretch_mode = 6
 
 [node name="MapName" type="Label" parent="MapGrid/MapCard_Candy" unique_id=1335985302]
