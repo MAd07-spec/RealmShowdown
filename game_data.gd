@@ -4,6 +4,18 @@ var selected_map: String = "space"
 var p1_character: String = "sensei"
 var p2_character: String = "knight"
 
+# Round tracking
+var current_round: int = 1
+var max_rounds: int = 3
+var p1_wins: int = 0
+var p2_wins: int = 0
+
+func reset_rounds() -> void:
+	current_round = 1
+	p1_wins = 0
+	p2_wins = 0
+
+
 var maps := {
 	"space": {
 		"name": "Space Splatter",

@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://7cwqo6wwlxr6" path="res://Player.tscn" id="2_bcbcq"]
 [ext_resource type="PackedScene" uid="uid://d3yje8cdto0rm" path="res://Player_two.tscn" id="3_bcbcq"]
 [ext_resource type="PackedScene" uid="uid://cdfyys5ou6br4" path="res://hud.tscn" id="4_js7pq"]
+[ext_resource type="Script" uid="uid://cw6sfbg7v3qbl" path="res://round_manager.gd" id="6_p1v5b"]
+[ext_resource type="FontFile" uid="uid://damu6pcn4per0" path="res://fonts/PressStart2P-Regular.ttf" id="7_wygdx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dftf"]
 size = Vector2(1279, 75)
@@ -49,3 +51,65 @@ shape = SubResource("RectangleShape2D_js7pq")
 position = Vector2(335, 140)
 
 [node name="hud" parent="." unique_id=1196102551 instance=ExtResource("4_js7pq")]
+
+[node name="RoundManager" type="CanvasLayer" parent="." unique_id=953206887]
+script = ExtResource("6_p1v5b")
+
+[node name="Overlay" type="ColorRect" parent="RoundManager" unique_id=1271187262]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RoundLabel" type="Label" parent="RoundManager" unique_id=1180762948]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -176.0
+offset_right = 17.0
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_wygdx")
+theme_override_font_sizes/font_size = 42
+horizontal_alignment = 1
+
+[node name="MessageLabel" type="Label" parent="RoundManager" unique_id=654967775]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.0
+offset_top = 57.0
+offset_right = 21.0
+offset_bottom = 156.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_wygdx")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+
+[node name="PromptLabel" type="Label" parent="RoundManager" unique_id=254488304]
+visible = false
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -19.0
+offset_right = 20.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_wygdx")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
