@@ -30,6 +30,13 @@ func _ready():
 	action_attack = "p%d_attack" % player_id
 	hitbox.monitoring = false  
 	hitbox.body_entered.connect(_on_attack_hitbox_body_entered)
+	
+	# LOAD CHARACTER SPRITES BASED ON SELECTION
+	var character_key = GameData.p1_character if player_id == 1 else GameData.p2_character
+	sprite.frames = GameData.characters[character_key]["frames"]
+	sprite.scale = GameData.characters[character_key]["scale"]
+	sprite.position = GameData.characters[character_key]["sprite_offset"]
+	sprite.play("idle")
 
 func _physics_process(delta):
 	floor_stop_on_slope = false
@@ -105,8 +112,6 @@ func _physics_process(delta):
 		hitbox.position.x = -80
 	else:
 		hitbox.position.x = 80
-	# DEBUG - remove after fixing
-	print("Player ", player_id, " hitbox pos: ", hitbox.global_position, " flip: ", sprite.flip_h)
 
 func enable_hitbox():
 	if not already_hit and current_stamina > 0:
