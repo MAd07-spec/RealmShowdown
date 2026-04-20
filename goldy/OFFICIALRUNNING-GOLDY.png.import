@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdtqsesa4iucr"
-path="res://.godot/imported/punchygoldy.png-1d848a41fda0cb46442fbd07867caaf6.ctex"
+uid="uid://c0bts4lt76hsp"
+path="res://.godot/imported/OFFICIALRUNNING-GOLDY.png-f76b6e345a21d3d5634a5c82fcd96475.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://goldy/punchygoldy.png"
-dest_files=["res://.godot/imported/punchygoldy.png-1d848a41fda0cb46442fbd07867caaf6.ctex"]
+source_file="res://goldy/OFFICIALRUNNING-GOLDY.png"
+dest_files=["res://.godot/imported/OFFICIALRUNNING-GOLDY.png-f76b6e345a21d3d5634a5c82fcd96475.ctex"]
 
 [params]
 
