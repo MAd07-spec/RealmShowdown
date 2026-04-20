@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://olg7h0ugrlu5" path="res://alien/spaceBG.png" id="2_p2rio"]
 [ext_resource type="Texture2D" uid="uid://q1t5dodrinny" path="res://alien/Japanbg.png" id="3_8uw4t"]
 [ext_resource type="Texture2D" uid="uid://f2i363kaf75c" path="res://maps/Ocean-map.jpg" id="4_pj00v"]
-[ext_resource type="Texture2D" uid="uid://bgbymkktfdm1n" path="res://candyland.png" id="5_p2rio"]
+[ext_resource type="Texture2D" uid="uid://bgbymkktfdm1n" path="res://maps/candyland.png" id="5_p2rio"]
 [ext_resource type="Texture2D" uid="uid://dk5kuoweo662a" path="res://goldy/fightPic.png" id="7_pj00v"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gq5wf"]

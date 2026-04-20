@@ -23,7 +23,7 @@ var maps := {
 	"candyland": {
 		"name": "Candy Chaos",
 		"scene": "res://candyland.tscn",
-		"preview": "res://maps/candy-land.png"
+		"preview": "res://maps/candyland.png"
 	}
 }
 
