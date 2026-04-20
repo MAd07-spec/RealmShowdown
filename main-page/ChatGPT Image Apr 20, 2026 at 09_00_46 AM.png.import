@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgbymkktfdm1n"
-path="res://.godot/imported/candyland.png-f1c6e5337f36ad144ba39e4b56d0c262.ctex"
+uid="uid://cdjf6ajqfrk0q"
+path="res://.godot/imported/ChatGPT Image Apr 20, 2026 at 09_00_46 AM.png-0885b2dd07668d08d15fd949988139f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://maps/candyland.png"
-dest_files=["res://.godot/imported/candyland.png-f1c6e5337f36ad144ba39e4b56d0c262.ctex"]
+source_file="res://main-page/ChatGPT Image Apr 20, 2026 at 09_00_46 AM.png"
+dest_files=["res://.godot/imported/ChatGPT Image Apr 20, 2026 at 09_00_46 AM.png-0885b2dd07668d08d15fd949988139f2.ctex"]
 
 [params]
 

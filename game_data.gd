@@ -22,8 +22,8 @@ var maps := {
 	},
 	"candyland": {
 		"name": "Candy Chaos",
-		"scene": "res://candyland.tscn",
-		"preview": "res://maps/candyland.png"
+		"scene": "res://candlyland.tscn",
+		"preview": "res://maps/candlyland.png"
 	}
 }
 

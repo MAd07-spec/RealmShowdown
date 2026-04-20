@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://cl6x5a6825ll1"]
 
-[ext_resource type="Script" uid="uid://b405j8jytn2hj" path="res://char_select.gd" id="1_47yjw"]
-[ext_resource type="Texture2D" uid="uid://b0bb01hauqo56" path="res://alien/fightersprite.png" id="2_jusa6"]
-[ext_resource type="Texture2D" uid="uid://cea1rpjt0ddsb" path="res://CharSelecBackground.png" id="2_nwkml"]
-[ext_resource type="Texture2D" uid="uid://cuf7q7a3djex6" path="res://knight/knight-preview.png" id="3_nwkml"]
-[ext_resource type="Texture2D" uid="uid://dhjosnxiap2yt" path="res://sensei/sensei-preview.png" id="4_4iq8o"]
-[ext_resource type="Texture2D" uid="uid://bqaryqt20g2qc" path="res://goldy/goldy-preview.png" id="5_d3bel"]
+[ext_resource type="Script" uid="uid://b405j8jytn2hj" path="res://char_select.gd" id="1_v37e7"]
+[ext_resource type="Texture2D" uid="uid://cea1rpjt0ddsb" path="res://CharSelecBackground.png" id="2_aykhy"]
+[ext_resource type="FontFile" uid="uid://damu6pcn4per0" path="res://fonts/PressStart2P-Regular.ttf" id="3_38dgn"]
+[ext_resource type="Texture2D" uid="uid://b0bb01hauqo56" path="res://alien/fightersprite.png" id="4_105ij"]
+[ext_resource type="Texture2D" uid="uid://cuf7q7a3djex6" path="res://knight/knight-preview.png" id="5_1vujy"]
+[ext_resource type="Texture2D" uid="uid://dhjosnxiap2yt" path="res://sensei/sensei-preview.png" id="6_6b7p3"]
+[ext_resource type="Texture2D" uid="uid://bqaryqt20g2qc" path="res://goldy/goldy-preview.png" id="7_3rfr5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_186bx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4wrwb"]
 
@@ -16,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_47yjw")
+script = ExtResource("1_v37e7")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1213493401]
 layout_mode = 1
@@ -31,7 +34,7 @@ color = Color(0.101960786, 0.101960786, 0.18039216, 1)
 layout_mode = 0
 offset_right = 1280.0
 offset_bottom = 720.0
-texture = ExtResource("2_nwkml")
+texture = ExtResource("2_aykhy")
 expand_mode = 1
 
 [node name="Title" type="Label" parent="." unique_id=102327967]
@@ -39,12 +42,15 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -188.0
-offset_top = 26.0
-offset_right = 219.0
-offset_bottom = 84.0
+offset_left = -402.0
+offset_top = 49.0
+offset_right = 453.0
+offset_bottom = 110.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 42
+theme_override_colors/font_color = Color(0.6666667, 0.7529412, 0.22352941, 1)
+theme_override_fonts/font = ExtResource("3_38dgn")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxEmpty_186bx")
 text = "Choose your Fighter"
 horizontal_alignment = 1
 
@@ -81,7 +87,7 @@ layout_mode = 2
 [node name="Preview" type="TextureRect" parent="P1Side/P1Grid/P1Card_alien" unique_id=1717171127]
 custom_minimum_size = Vector2(160, 80)
 layout_mode = 2
-texture = ExtResource("2_jusa6")
+texture = ExtResource("4_105ij")
 expand_mode = 3
 stretch_mode = 5
 
@@ -97,7 +103,7 @@ layout_mode = 2
 
 [node name="Preview" type="TextureRect" parent="P1Side/P1Grid/P1Card_knight" unique_id=171836712]
 layout_mode = 2
-texture = ExtResource("3_nwkml")
+texture = ExtResource("5_1vujy")
 expand_mode = 3
 stretch_mode = 6
 
@@ -113,9 +119,9 @@ layout_mode = 2
 [node name="Preview" type="TextureRect" parent="P1Side/P1Grid/P1Card_sensei" unique_id=915751325]
 custom_minimum_size = Vector2(160, 80)
 layout_mode = 2
-texture = ExtResource("4_4iq8o")
+texture = ExtResource("6_6b7p3")
 expand_mode = 3
-stretch_mode = 6
+stretch_mode = 5
 
 [node name="CharName" type="Label" parent="P1Side/P1Grid/P1Card_sensei" unique_id=764954928]
 layout_mode = 2
@@ -129,9 +135,9 @@ layout_mode = 2
 [node name="Preview" type="TextureRect" parent="P1Side/P1Grid/P1Card_goldy" unique_id=1890639133]
 custom_minimum_size = Vector2(160, 80)
 layout_mode = 2
-texture = ExtResource("5_d3bel")
+texture = ExtResource("7_3rfr5")
 expand_mode = 3
-stretch_mode = 6
+stretch_mode = 5
 
 [node name="CharName" type="Label" parent="P1Side/P1Grid/P1Card_goldy" unique_id=1133687234]
 layout_mode = 2
@@ -179,7 +185,7 @@ layout_mode = 2
 [node name="Preview" type="TextureRect" parent="P2Side/P2Grid/P2Card_alien" unique_id=962145875]
 custom_minimum_size = Vector2(160, 80)
 layout_mode = 2
-texture = ExtResource("2_jusa6")
+texture = ExtResource("4_105ij")
 expand_mode = 3
 stretch_mode = 5
 
@@ -195,7 +201,7 @@ layout_mode = 2
 [node name="Preview" type="TextureRect" parent="P2Side/P2Grid/P2Card_knight" unique_id=244507388]
 custom_minimum_size = Vector2(160, 80)
 layout_mode = 2
-texture = ExtResource("3_nwkml")
+texture = ExtResource("5_1vujy")
 expand_mode = 3
 stretch_mode = 6
 
@@ -211,9 +217,9 @@ layout_mode = 2
 [node name="Preview" type="TextureRect" parent="P2Side/P2Grid/P2Card_sensei" unique_id=1984344992]
 custom_minimum_size = Vector2(160, 80)
 layout_mode = 2
-texture = ExtResource("4_4iq8o")
+texture = ExtResource("6_6b7p3")
 expand_mode = 3
-stretch_mode = 6
+stretch_mode = 5
 
 [node name="CharName" type="Label" parent="P2Side/P2Grid/P2Card_sensei" unique_id=72313962]
 layout_mode = 2
@@ -227,7 +233,7 @@ layout_mode = 2
 [node name="Preview" type="TextureRect" parent="P2Side/P2Grid/P2Card_goldy" unique_id=724029643]
 custom_minimum_size = Vector2(160, 80)
 layout_mode = 2
-texture = ExtResource("5_d3bel")
+texture = ExtResource("7_3rfr5")
 expand_mode = 3
 stretch_mode = 6
 
@@ -243,18 +249,48 @@ text = "P2: Press Enter to confirm"
 
 [node name="P1title" type="Label" parent="." unique_id=1025350047]
 layout_mode = 0
-offset_left = 234.0
-offset_top = 12.0
-offset_right = 377.0
-offset_bottom = 69.0
+offset_left = 204.0
+offset_top = 297.0
+offset_right = 484.0
+offset_bottom = 354.0
+theme_override_colors/font_color = Color(0.7260757, 0.48232532, 1, 1)
+theme_override_fonts/font = ExtResource("3_38dgn")
 theme_override_font_sizes/font_size = 35
 text = "Player 1"
 
 [node name="P2title" type="Label" parent="." unique_id=916072495]
 layout_mode = 0
-offset_left = 927.0
-offset_top = 9.0
-offset_right = 1070.0
-offset_bottom = 63.0
-theme_override_font_sizes/font_size = 35
+offset_left = 828.0
+offset_top = 304.0
+offset_right = 1124.0
+offset_bottom = 358.0
+theme_override_colors/font_color = Color(0.9865758, 0.3019098, 0, 1)
+theme_override_fonts/font = ExtResource("3_38dgn")
+theme_override_font_sizes/font_size = 37
 text = "Player 2"
+
+[node name="VS" type="Label" parent="." unique_id=790348828]
+layout_mode = 0
+offset_left = 580.0
+offset_top = 418.0
+offset_right = 686.0
+offset_bottom = 496.0
+theme_override_colors/font_color = Color(0.7254902, 0.48235294, 1, 1)
+theme_override_fonts/font = ExtResource("3_38dgn")
+theme_override_font_sizes/font_size = 55
+text = "V"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VS2" type="Label" parent="." unique_id=4946198]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 418.0
+offset_right = 746.0
+offset_bottom = 496.0
+theme_override_colors/font_color = Color(0.9882353, 0.3019608, 0, 1)
+theme_override_fonts/font = ExtResource("3_38dgn")
+theme_override_font_sizes/font_size = 55
+text = "S"
+horizontal_alignment = 1
+vertical_alignment = 1
