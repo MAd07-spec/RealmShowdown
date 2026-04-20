@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b405j8jytn2hj" path="res://char_select.gd" id="1_47yjw"]
 [ext_resource type="Texture2D" uid="uid://b0bb01hauqo56" path="res://alien/fightersprite.png" id="2_jusa6"]
+[ext_resource type="Texture2D" uid="uid://cea1rpjt0ddsb" path="res://CharSelecBackground.png" id="2_nwkml"]
 [ext_resource type="Texture2D" uid="uid://cuf7q7a3djex6" path="res://knight/knight-preview.png" id="3_nwkml"]
 [ext_resource type="Texture2D" uid="uid://dhjosnxiap2yt" path="res://sensei/sensei-preview.png" id="4_4iq8o"]
 [ext_resource type="Texture2D" uid="uid://bqaryqt20g2qc" path="res://goldy/goldy-preview.png" id="5_d3bel"]
@@ -26,15 +27,22 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.101960786, 0.101960786, 0.18039216, 1)
 
+[node name="TextureRect" type="TextureRect" parent="Background" unique_id=2016664750]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("2_nwkml")
+expand_mode = 1
+
 [node name="Title" type="Label" parent="." unique_id=102327967]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -203.5
-offset_top = 56.0
-offset_right = 203.5
-offset_bottom = 58.0
+offset_left = -188.0
+offset_top = 26.0
+offset_right = 219.0
+offset_bottom = 84.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 42
 text = "Choose your Fighter"
@@ -45,18 +53,11 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 109.0
-offset_top = 3.0
-offset_right = -201.0
-offset_bottom = 165.0
+offset_left = 167.0
+offset_top = 94.0
+offset_right = -143.0
+offset_bottom = 282.0
 theme_override_constants/separation = 10
-
-[node name="P1Label" type="Label" parent="P1Side" unique_id=1766055293]
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 28
-text = "Player 1"
-horizontal_alignment = 1
 
 [node name="P1Preview" type="TextureRect" parent="P1Side" unique_id=579240267]
 custom_minimum_size = Vector2(200, 200)
@@ -148,17 +149,12 @@ anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 211.0
-offset_right = -99.0
-offset_bottom = 162.0
+offset_left = 174.0
+offset_top = 95.0
+offset_right = -136.0
+offset_bottom = 257.0
 grow_horizontal = 0
 theme_override_constants/separation = 10
-
-[node name="P2Label" type="Label" parent="P2Side" unique_id=816973063]
-layout_mode = 2
-theme_override_font_sizes/font_size = 28
-text = "Player 2"
-horizontal_alignment = 1
 
 [node name="P2Preview" type="TextureRect" parent="P2Side" unique_id=1385060225]
 custom_minimum_size = Vector2(200, 200)
@@ -244,3 +240,21 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
 text = "P2: Press Enter to confirm"
+
+[node name="P1title" type="Label" parent="." unique_id=1025350047]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 12.0
+offset_right = 377.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 35
+text = "Player 1"
+
+[node name="P2title" type="Label" parent="." unique_id=916072495]
+layout_mode = 0
+offset_left = 927.0
+offset_top = 9.0
+offset_right = 1070.0
+offset_bottom = 63.0
+theme_override_font_sizes/font_size = 35
+text = "Player 2"
