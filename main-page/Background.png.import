@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4y7gropwielx"
-path="res://.godot/imported/goldy-punch.png-4308ec2026efbd212c7fe38151416f61.ctex"
+uid="uid://dtncl6whd0e2t"
+path="res://.godot/imported/Background.png-c1c48a756d2c52b3d6433541ae16cf3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://goldy/goldy-punch.png"
-dest_files=["res://.godot/imported/goldy-punch.png-4308ec2026efbd212c7fe38151416f61.ctex"]
+source_file="res://main-page/Background.png"
+dest_files=["res://.godot/imported/Background.png-c1c48a756d2c52b3d6433541ae16cf3f.ctex"]
 
 [params]
 

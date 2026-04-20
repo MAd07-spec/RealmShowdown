@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2xmy4ivooma2"
-path="res://.godot/imported/goldy-idle.png-72b009e5302a2c63fe45dcd97e8cf34e.ctex"
+uid="uid://qo2ptpn38a4h"
+path="res://.godot/imported/OFFICIALIDLE-GOLDY.png-1d8b7b31a36b713db0c5b2493fbd5b1b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://goldy/goldy-idle.png"
-dest_files=["res://.godot/imported/goldy-idle.png-72b009e5302a2c63fe45dcd97e8cf34e.ctex"]
+source_file="res://goldy/OFFICIALIDLE-GOLDY.png"
+dest_files=["res://.godot/imported/OFFICIALIDLE-GOLDY.png-1d8b7b31a36b713db0c5b2493fbd5b1b.ctex"]
 
 [params]
 

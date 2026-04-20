@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jaryydyxgk07"
-path="res://.godot/imported/goldly-run.png-a5a660b7bb7fe4c834c28350d9ce54c2.ctex"
+uid="uid://c0bts4lt76hsp"
+path="res://.godot/imported/OFFICIALRUNNING-GOLDY.png-f76b6e345a21d3d5634a5c82fcd96475.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://goldy/goldly-run.png"
-dest_files=["res://.godot/imported/goldly-run.png-a5a660b7bb7fe4c834c28350d9ce54c2.ctex"]
+source_file="res://goldy/OFFICIALRUNNING-GOLDY.png"
+dest_files=["res://.godot/imported/OFFICIALRUNNING-GOLDY.png-f76b6e345a21d3d5634a5c82fcd96475.ctex"]
 
 [params]
 

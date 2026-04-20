@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Move along x axis"
-run/main_scene="res://char_select.tscn"
+run/main_scene="uid://c3n7oxs2ucjhj"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

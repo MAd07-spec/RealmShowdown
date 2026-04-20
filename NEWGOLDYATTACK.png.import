@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2yekrpdx1p13"
-path="res://.godot/imported/goldy-run2.png-78fce6780b92f7a34360049d1556e0f8.ctex"
+uid="uid://c767w2pw3qggi"
+path="res://.godot/imported/NEWGOLDYATTACK.png-c74fce320f75923680a7a74b7d2b1126.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://goldy/goldy-run2.png"
-dest_files=["res://.godot/imported/goldy-run2.png-78fce6780b92f7a34360049d1556e0f8.ctex"]
+source_file="res://NEWGOLDYATTACK.png"
+dest_files=["res://.godot/imported/NEWGOLDYATTACK.png-c74fce320f75923680a7a74b7d2b1126.ctex"]
 
 [params]
 

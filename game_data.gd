@@ -4,6 +4,18 @@ var selected_map: String = "space"
 var p1_character: String = "sensei"
 var p2_character: String = "knight"
 
+# Round tracking
+var current_round: int = 1
+var max_rounds: int = 3
+var p1_wins: int = 0
+var p2_wins: int = 0
+
+func reset_rounds() -> void:
+	current_round = 1
+	p1_wins = 0
+	p2_wins = 0
+
+
 var maps := {
 	"space": {
 		"name": "Space Splatter",
@@ -22,8 +34,8 @@ var maps := {
 	},
 	"candyland": {
 		"name": "Candy Chaos",
-		"scene": "res://candyland.tscn",
-		"preview": "res://maps/candyland.png"
+		"scene": "res://candlyland.tscn",
+		"preview": "res://maps/candlyland.png"
 	}
 }
 
@@ -59,8 +71,8 @@ var characters := {
 		"name": "Goldy",
 		"frames": preload("res://goldy/goldy_frames.tres"),
 		"preview": "res://goldy/goldy-preview.png",
-		"scale": Vector2(2.50, 2.50),
-		"sprite_offset": Vector2(70.0, -90.0)
+		"scale": Vector2(3.50, 3.50),
+		"sprite_offset": Vector2(70.0, -220.0)
 		
 
 	}

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df3ycap1w3vtu"
-path="res://.godot/imported/goldy-punch2.png-8abe31412fc0ac51af64555d8ab92151.ctex"
+uid="uid://cdjf6ajqfrk0q"
+path="res://.godot/imported/ChatGPT Image Apr 20, 2026 at 09_00_46 AM.png-0885b2dd07668d08d15fd949988139f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://goldy/goldy-punch2.png"
-dest_files=["res://.godot/imported/goldy-punch2.png-8abe31412fc0ac51af64555d8ab92151.ctex"]
+source_file="res://main-page/ChatGPT Image Apr 20, 2026 at 09_00_46 AM.png"
+dest_files=["res://.godot/imported/ChatGPT Image Apr 20, 2026 at 09_00_46 AM.png-0885b2dd07668d08d15fd949988139f2.ctex"]
 
 [params]
 

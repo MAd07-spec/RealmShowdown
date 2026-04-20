@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj36nyg3wcghr"
-path="res://.godot/imported/goldy-special.png-927fe77ce8f9ca13053d120ffd7c9aba.ctex"
+uid="uid://dtncl6whd0e2t"
+path="res://.godot/imported/Background.png-d346e9ce37c7294bb8a0c89de5d380cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://goldy/goldy-special.png"
-dest_files=["res://.godot/imported/goldy-special.png-927fe77ce8f9ca13053d120ffd7c9aba.ctex"]
+source_file="res://Background.png"
+dest_files=["res://.godot/imported/Background.png-d346e9ce37c7294bb8a0c89de5d380cd.ctex"]
 
 [params]
 
