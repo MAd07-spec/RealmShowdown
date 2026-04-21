@@ -109,9 +109,9 @@ func _physics_process(delta):
 
 	# POSITION HITBOX IN FRONT OF PLAYER
 	if sprite.flip_h:
-		hitbox.position.x = -80
+		hitbox.position.x = -40
 	else:
-		hitbox.position.x = 80
+		hitbox.position.x = 40
 
 func enable_hitbox():
 	if not already_hit and current_stamina > 0:

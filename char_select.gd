@@ -57,6 +57,7 @@ func _ready() -> void:
 
 func _update_p1(index: int) -> void:
 	p1_index = index
+	MusicManager.play_sfx("click")
 	var char_data: Dictionary = GameData.characters[CHAR_IDS[index]]
 	p1_preview.texture = load(char_data["preview"])
 	p1_name.text = char_data["name"]
@@ -66,6 +67,7 @@ func _update_p1(index: int) -> void:
 
 func _update_p2(index: int) -> void:
 	p2_index = index
+	MusicManager.play_sfx("click")
 	var char_data: Dictionary = GameData.characters[CHAR_IDS[index]]
 	p2_preview.texture = load(char_data["preview"])
 	p2_name.text = char_data["name"]
@@ -84,16 +86,18 @@ func _p2_select(index: int) -> void:
 
 
 func _p1_confirm() -> void:
+	MusicManager.play_sfx("click")
 	p1_confirmed = true
 	p1_confirm.text = "P1: Ready!"
-	p1_confirm.modulate = Color(0.2, 1.0, 0.2)  # turns green
+	p1_confirm.modulate = Color(0.2, 1.0, 0.2)
 	_check_both_confirmed()
 
 
 func _p2_confirm() -> void:
+	MusicManager.play_sfx("click")
 	p2_confirmed = true
 	p2_confirm.text = "P2: Ready!"
-	p2_confirm.modulate = Color(0.2, 1.0, 0.2)  # turns green
+	p2_confirm.modulate = Color(0.2, 1.0, 0.2)
 	_check_both_confirmed()
 
 
@@ -113,7 +117,6 @@ func _check_both_confirmed() -> void:
 
 
 func _input(event: InputEvent) -> void:
-	# P1 navigation — A/D keys
 	if event.is_action_pressed("p1_right"):
 		if not p1_confirmed:
 			_update_p1((p1_index + 1) % CHAR_IDS.size())
@@ -123,7 +126,6 @@ func _input(event: InputEvent) -> void:
 	elif event.is_action_pressed("p1_confirm"):
 		_p1_confirm()
 
-	# P2 navigation — Arrow keys
 	if event.is_action_pressed("p2_right"):
 		if not p2_confirmed:
 			_update_p2((p2_index + 1) % CHAR_IDS.size())

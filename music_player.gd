@@ -1,6 +1,7 @@
 extends Node
 
 var music_player: AudioStreamPlayer
+var sfx_player: AudioStreamPlayer
 
 var tracks = {
 	"menu": preload("res://main-page/titlescreenmusic.mp3"),
@@ -11,15 +12,21 @@ var tracks = {
 	"candyland": preload("res://music/candyland.mp3")
 }
 
+var sfx = {
+	"click": preload("res://music/buttonclick.mp3")  
+}
+
 func _ready():
 	music_player = AudioStreamPlayer.new()
 	music_player.volume_db = 0
 	add_child(music_player)
+	sfx_player = AudioStreamPlayer.new()
+	sfx_player.volume_db = 0
+	add_child(sfx_player)
 
 func play(track_name: String):
 	if not tracks.has(track_name):
 		return
-	# DONT RESTART IF SAME TRACK IS ALREADY PLAYING
 	if music_player.stream == tracks[track_name] and music_player.playing:
 		return
 	music_player.stream = tracks[track_name]
@@ -27,3 +34,9 @@ func play(track_name: String):
 
 func stop():
 	music_player.stop()
+
+func play_sfx(sfx_name: String):
+	if not sfx.has(sfx_name):
+		return
+	sfx_player.stream = sfx[sfx_name]
+	sfx_player.play()

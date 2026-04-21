@@ -4,6 +4,7 @@ func _ready() -> void:
 	MusicManager.play("menu")
 
 func _on_button_pressed() -> void:
+	MusicManager.play_sfx("click")
 	get_tree().change_scene_to_file("res://main-page/char_select.tscn")
 
 func _on_play_pressed():
