@@ -11,6 +11,7 @@ var card_nodes: Array[Control] = []
 @onready var back_btn    := $BackButton
 
 func _ready() -> void:
+	MusicManager.play("map_select")
 	for child in grid.get_children():
 		card_nodes.append(child)
 

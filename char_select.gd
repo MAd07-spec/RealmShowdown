@@ -20,6 +20,7 @@ var p2_cards: Array[Control] = []
 @onready var p2_confirm := $P2Side/P2Confirm
 
 func _ready() -> void:
+	MusicManager.play("menu")
 	for child in p1_grid.get_children():
 		p1_cards.append(child)
 	for child in p2_grid.get_children():

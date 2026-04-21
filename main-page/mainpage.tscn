@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b83wwbmuu02ph" path="res://main-page/mainpage.gd" id="1_67bnl"]
 [ext_resource type="Texture2D" uid="uid://dtncl6whd0e2t" path="res://main-page/Background.png" id="2_wftlp"]
 [ext_resource type="Texture2D" uid="uid://cdjf6ajqfrk0q" path="res://main-page/ChatGPT Image Apr 20, 2026 at 09_00_46 AM.png" id="3_nvwmm"]
+[ext_resource type="AudioStream" uid="uid://brbjhdak35iju" path="res://main-page/titlescreenmusic.mp3" id="4_wftlp"]
 
 [sub_resource type="FontVariation" id="FontVariation_c5oy3"]
 variation_embolden = 0.7
@@ -81,5 +82,9 @@ icon_alignment = 1
 position = Vector2(643.5, 370)
 scale = Vector2(0.33789065, 0.38476565)
 texture = ExtResource("3_nvwmm")
+
+[node name="mainPgMusic" type="AudioStreamPlayer2D" parent="." unique_id=1950400691]
+stream = ExtResource("4_wftlp")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

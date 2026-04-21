@@ -294,3 +294,5 @@ theme_override_font_sizes/font_size = 55
 text = "S"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="charSelecMusic" type="AudioStreamPlayer2D" parent="." unique_id=377659822]
