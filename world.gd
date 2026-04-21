@@ -6,6 +6,8 @@ var p1_start_pos := Vector2(-441, 1)
 var p2_start_pos := Vector2(157, -2)
 
 func _ready() -> void:
+	var map_music = GameData.maps[GameData.selected_map]["music"]
+	MusicManager.play(map_music)
 	_load_map_background()
 	_set_players_active(false)  # disabled until round starts
 	round_manager.round_started.connect(_on_round_started)

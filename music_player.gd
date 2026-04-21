@@ -4,13 +4,11 @@ var music_player: AudioStreamPlayer
 
 var tracks = {
 	"menu": preload("res://main-page/titlescreenmusic.mp3"),
-	#"map_select": preload("res://mapselectionscreen.mp3")
-	#"menu": preload("res://titlescreenmusic.mp3"),
-	#"map_select": preload("res://mapselectionscreen.mp3"),
-	#"space": preload("res://music/space_battle.mp3"),
-	#"japan": preload("res://music/japan_battle.mp3"),
-	#"ocean": preload("res://music/ocean_battle.mp3"),
-	#"candyland": preload("res://music/candyland_battle.mp3")
+	"map_select": preload("res://mapselectionscreen.mp3"),
+	"space": preload("res://music/space.mp3"),
+	"japan": preload("res://music/japan.mp3"),
+	"ocean": preload("res://music/ocean.mp3"),
+	"candyland": preload("res://music/candyland.mp3")
 }
 
 func _ready():

@@ -20,26 +20,26 @@ var maps := {
 	"space": {
 		"name": "Space Splatter",
 		"scene": "res://space.tscn",
-		#"preview": "res://maps/spaceBG.png"
+		"preview": "res://maps/spaceBG.png",
 		"music": "space"
 	},
 	"Japan": {
 		"name": "Japan Jams",
 		"scene": "res://japan.tscn",
-		"preview": "res://maps/Japanbg.png"
-		#"music": "japan"
+		"preview": "res://maps/Japanbg.png",
+		"music": "japan"
 	},
 	"Ocean": {
 		"name": "Ocean Opus",
 		"scene": "res://ocean.tscn",
-		"preview": "res://maps/Ocean-map.jpg"
-		#"music": "ocean"
+		"preview": "res://maps/Ocean-map.jpg",
+		"music": "ocean"
 	},
 	"candyland": {
 		"name": "Candy Chaos",
 		"scene": "res://candlyland.tscn",
-		"preview": "res://maps/candlyland.png"
-		#"music": "candyland"
+		"preview": "res://maps/candlyland.png",
+		"music": "candyland"
 	}
 }
 
