@@ -21,6 +21,7 @@ size = Vector2(0.5, 607)
 script = ExtResource("1_eu7l1")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1447634756]
+position = Vector2(-0.99999994, -15.000002)
 scale = Vector2(0.8185897, 0.82909924)
 texture = ExtResource("1_2dftf")
 
@@ -65,7 +66,7 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="RoundLabel" type="Label" parent="RoundManager" unique_id=1180762948]
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -99,7 +100,7 @@ horizontal_alignment = 1
 
 [node name="PromptLabel" type="Label" parent="RoundManager" unique_id=254488304]
 visible = false
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5

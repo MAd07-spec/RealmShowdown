@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://d3yje8cdto0rm"]
 
 [ext_resource type="Script" uid="uid://dnkba6gtk00hi" path="res://player.gd" id="1_72slw"]
+[ext_resource type="AudioStream" uid="uid://r1s2v6v6sdr" path="res://sounds/knifehit.mp3" id="2_72slw"]
+[ext_resource type="AudioStream" uid="uid://cxgcfhjna5e78" path="res://sounds/death.mp3" id="3_0vwx3"]
+[ext_resource type="AudioStream" uid="uid://pmvddrvfbpk2" path="res://sounds/running1.mp3" id="4_2e07v"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e80uo"]
 radius = 57.0
@@ -32,3 +35,19 @@ position = Vector2(61.25, -113)
 shape = SubResource("RectangleShape2D_72slw")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=338608507]
+
+[node name="AudioAttack" type="AudioStreamPlayer2D" parent="." unique_id=2036808299]
+stream = ExtResource("2_72slw")
+
+[node name="AudioHurt" type="AudioStreamPlayer2D" parent="." unique_id=737289177]
+stream = ExtResource("3_0vwx3")
+volume_db = 0.972
+pitch_scale = 2.93
+attenuation = 0.6830202
+
+[node name="AudioDie" type="AudioStreamPlayer2D" parent="." unique_id=56583972]
+stream = ExtResource("3_0vwx3")
+
+[node name="AudioRun" type="AudioStreamPlayer2D" parent="." unique_id=654862809]
+stream = ExtResource("4_2e07v")
+volume_db = 24.0

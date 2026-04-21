@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://7cwqo6wwlxr6"]
 
 [ext_resource type="Script" uid="uid://dnkba6gtk00hi" path="res://player.gd" id="1_e80uo"]
+[ext_resource type="AudioStream" uid="uid://r1s2v6v6sdr" path="res://sounds/knifehit.mp3" id="2_e80uo"]
+[ext_resource type="AudioStream" uid="uid://cxgcfhjna5e78" path="res://sounds/death.mp3" id="3_cxr5p"]
+[ext_resource type="AudioStream" uid="uid://pmvddrvfbpk2" path="res://sounds/running1.mp3" id="4_tdg3f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e80uo"]
 radius = 57.0
@@ -17,7 +20,7 @@ script = ExtResource("1_e80uo")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=867386054]
 position = Vector2(59.765633, -232.8672)
 scale = Vector2(6.6298823, 8.273601)
-animation = &"hurt"
+animation = &""
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1438248990]
 position = Vector2(62, -97)
@@ -29,3 +32,19 @@ collision_layer = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackHitbox" unique_id=1191193366]
 position = Vector2(62, -115.5)
 shape = SubResource("RectangleShape2D_e80uo")
+
+[node name="AudioAttack" type="AudioStreamPlayer2D" parent="." unique_id=1315238312]
+stream = ExtResource("2_e80uo")
+volume_db = 24.0
+
+[node name="AudioHurt" type="AudioStreamPlayer2D" parent="." unique_id=1974266987]
+stream = ExtResource("3_cxr5p")
+volume_db = 0.972
+pitch_scale = 2.93
+attenuation = 0.6830202
+
+[node name="AudioDie" type="AudioStreamPlayer2D" parent="." unique_id=69172685]
+stream = ExtResource("3_cxr5p")
+
+[node name="AudioRun" type="AudioStreamPlayer2D" parent="." unique_id=229819640]
+stream = ExtResource("4_tdg3f")

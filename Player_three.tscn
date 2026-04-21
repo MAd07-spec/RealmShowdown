@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dnkba6gtk00hi" path="res://player.gd" id="1_35ckh"]
 [ext_resource type="SpriteFrames" uid="uid://d3l70kr4xxisb" path="res://alien/alien_frames.tres" id="2_swgxp"]
+[ext_resource type="AudioStream" uid="uid://dulkxmqi51nv5" path="res://sounds/punch.wav" id="3_35ckh"]
+[ext_resource type="AudioStream" uid="uid://cxgcfhjna5e78" path="res://sounds/death.mp3" id="4_os13k"]
+[ext_resource type="AudioStream" uid="uid://pmvddrvfbpk2" path="res://sounds/running1.mp3" id="5_4dn3d"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e80uo"]
 radius = 57.0
@@ -34,3 +37,22 @@ collision_layer = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackHitbox" unique_id=247468425]
 position = Vector2(-106, -113)
 shape = SubResource("RectangleShape2D_72slw")
+
+[node name="AudioAttack" type="AudioStreamPlayer2D" parent="." unique_id=858513121]
+stream = ExtResource("3_35ckh")
+volume_db = 24.0
+pitch_scale = 1.85
+attenuation = 0.8705506
+
+[node name="AudioHurt" type="AudioStreamPlayer2D" parent="." unique_id=1543625800]
+stream = ExtResource("4_os13k")
+volume_db = 0.972
+pitch_scale = 2.93
+attenuation = 0.6830202
+
+[node name="AudioDie" type="AudioStreamPlayer2D" parent="." unique_id=328344650]
+stream = ExtResource("4_os13k")
+
+[node name="AudioRun" type="AudioStreamPlayer2D" parent="." unique_id=2112879596]
+stream = ExtResource("5_4dn3d")
+volume_db = 24.0

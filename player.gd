@@ -1,4 +1,5 @@
 extends CharacterBody2D
+
 @export var player_id: int = 1
 var speed = 300.0
 var is_attacking = false
@@ -12,12 +13,20 @@ var max_stamina = 100.0
 var current_stamina = 100.0
 var stamina_regen_rate = 15.0 
 var is_hurt = false
-@onready var sprite = $AnimatedSprite2D
-@onready var hitbox = $AttackHitbox
+var was_running := false
+
+@onready var sprite        = $AnimatedSprite2D
+@onready var hitbox        = $AttackHitbox
+@onready var audio_attack  = $AudioAttack
+@onready var audio_hurt    = $AudioHurt
+@onready var audio_die     = $AudioDie
+@onready var audio_run     = $AudioRun
+
 var action_left: String
 var action_right: String
 var action_jump: String
 var action_attack: String
+
 signal health_changed(player_id, new_health)
 signal player_died(player_id)
 signal stamina_changed(player_id, new_stamina)
@@ -75,6 +84,7 @@ func _physics_process(delta):
 		current_stamina = max(current_stamina, 0.0)
 		emit_signal("stamina_changed", player_id, current_stamina)
 		sprite.play("attack")
+		audio_attack.play()
 		print("Player %d Attack! Damage: %d" % [player_id, attack_damage])
 		await get_tree().create_timer(0.15).timeout
 		enable_hitbox()
@@ -90,8 +100,13 @@ func _physics_process(delta):
 			already_hit = false
 	elif direction != 0:
 		sprite.play("running")
+		# Only trigger run sound when starting to run, not every frame
+		if not was_running and is_on_floor():
+			audio_run.play()
+		was_running = true
 	else:
 		sprite.play("idle")
+		was_running = false
 
 	# FLIP - face the opponent
 	var opponent_path = "/root/World/Player" if player_id == 2 else "/root/World/Player2"
@@ -123,11 +138,14 @@ func take_damage(amount: int):
 	emit_signal("health_changed", player_id, current_health)
 	print("Player %d took %d damage, health: %d" % [player_id, amount, current_health])
 	if current_health <= 0:
+		audio_die.play()
+		await audio_die.finished
 		emit_signal("player_died", player_id)
 		print("Player %d has died!" % player_id)
 		queue_free()
 	else:
 		is_hurt = true
+		audio_hurt.play()
 		sprite.play("hurt")
 
 func _on_attack_hitbox_body_entered(body):
