@@ -1,7 +1,8 @@
 extends Node
 
 var music_player: AudioStreamPlayer
-var sfx_player: AudioStreamPlayer
+var sfx_players: Array[AudioStreamPlayer] = []
+var sfx_pool_size = 5
 
 var tracks = {
 	"menu": preload("res://main-page/titlescreenmusic.mp3"),
@@ -13,16 +14,18 @@ var tracks = {
 }
 
 var sfx = {
-	"click": preload("res://music/buttonclick.mp3")  
+	"click": preload("res://music/buttonclick.mp3")
 }
 
 func _ready():
 	music_player = AudioStreamPlayer.new()
 	music_player.volume_db = 0
 	add_child(music_player)
-	sfx_player = AudioStreamPlayer.new()
-	sfx_player.volume_db = 0
-	add_child(sfx_player)
+	# CREATE SFX POOL
+	for i in range(sfx_pool_size):
+		var p = AudioStreamPlayer.new()
+		add_child(p)
+		sfx_players.append(p)
 
 func play(track_name: String):
 	if not tracks.has(track_name):
@@ -38,5 +41,17 @@ func stop():
 func play_sfx(sfx_name: String):
 	if not sfx.has(sfx_name):
 		return
-	sfx_player.stream = sfx[sfx_name]
-	sfx_player.play()
+	# FIND A FREE PLAYER IN THE POOL
+	for p in sfx_players:
+		if not p.playing:
+			p.stream = sfx[sfx_name]
+			p.play()
+			return
+
+func play_sound(stream: AudioStream):
+	# PLAY A DIRECT STREAM (for character sounds)
+	for p in sfx_players:
+		if not p.playing:
+			p.stream = stream
+			p.play()
+			return
